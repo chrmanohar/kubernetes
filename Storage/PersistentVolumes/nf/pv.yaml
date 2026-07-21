@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: PersistentVolume 
+metaadata:
+  naame: jenkins-pv
+  labels:
+    app: jenkins-pv
+    environment: dev 
+spec:
+  storageClassName: nfs
+  capacity:
+    storage: 2Gi
+  accessModes:
+    - readwriteonce
+  nfs:
+    server: 192.116.0.205
+    path: /var/nfs/jekins-data
