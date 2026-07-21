@@ -22,7 +22,7 @@ spec:
         image: jenkins/jenkins:lts
         ports:
           - name: cicd-port
-            port: 80
+            containerPort: 80
             protocol: TCP
         volumeMount:
           - name: jenkins-data
