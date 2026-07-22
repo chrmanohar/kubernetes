@@ -12,7 +12,7 @@ spec:
       environment: production
   template:
     metadata:
-      name: jenkins-master
+      name: jenkins-demo
       lables: 
         app: cicd-master
         environment: production
