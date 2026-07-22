@@ -24,12 +24,12 @@ spec:
           - name: cicd-port
             containerPort: 80
             protocol: TCP
-        volumeMount:
+        volumeMounts:
           - name: jenkins-data
             mountPath: /var/jenkins_home #/var/lib/jenkins
       volumes:
        - name: jenkins-data
-         PersistentVolumeClaim:
+         persistentVolumeClaim:
           claimName: jenkins-pvc
 
 
