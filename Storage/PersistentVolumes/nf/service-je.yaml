@@ -1,6 +1,7 @@
 apiVersion: vi 
 kind: Service 
-metadata: jenkins-svc 
+metadata: 
+  name: jenkins-svc 
 spec:
   selector:
     app: cicd-master
