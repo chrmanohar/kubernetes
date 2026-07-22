@@ -10,7 +10,7 @@ spec:
   capacity:
     storage: 2Gi
   accessModes:
-    - readWriteonce
+    - ReadWriteOnce
   nfs:
     server: 172.31.35.230
     path: /var/nfs/jekins-data
