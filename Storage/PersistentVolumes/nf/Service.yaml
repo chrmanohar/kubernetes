@@ -1,0 +1,11 @@
+apiVersion: vi 
+kind: Service 
+metadata: jenkins-svc 
+spec:
+  selector:
+    app: cicd-master
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+  type: NodePort
