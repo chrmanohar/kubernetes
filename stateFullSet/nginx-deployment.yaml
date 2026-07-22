@@ -1,0 +1,32 @@
+apiVersion: app/vi
+kind: StateFulSet 
+metadata:
+  name: sts-demo
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        ports:
+          - containerPort: 80
+        volumeMounts:
+          - name: nginx-data
+            mountPath: /usr/share/nginx/html
+  volumeClainTemplates:
+  - metadata:
+      name: nginx-data
+    spec:
+      staorageClassName: hostpath
+      accessMODES: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 1Gi
+  
